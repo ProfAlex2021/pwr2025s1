@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8" />
+    <head>
+        <title>Pizzaria Cheiro Forte</title>
+    </head>
+    <body>
+        <h1>Pedido de Pizza</h1>
+        <form action="enviar_pedido.php" method="post">
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome" name="nome" required><br><br>
+            <label for="endereco">Endereço:</label><br>
+            <input type="text" id="endereco" name="endereco" required><br><br>
+            <label for="telefone">Telefone:</label><br>
+            <input type="tel" id="telefone" name="telefone" required><br><br>
+            <label for="sabor">Sabor da Pizza:</label><br>
+            <select id="sabor" name="sabor" required>
+                <option value="">--Selecione--</option>
+                <option value="calabresa">Calabresa</option>
+                <option value="quatro_queijos">Quatro Queijos</option>
+                <option value="portuguesa">Portuguesa</option>
+                <option value="frango_catupiry">Frango com Catupiry</option>
+                <option value="doce_banana">Banana com Canela</option>
+            </select><br><br>
+            <label>Ingredientes adicionais:</label><br>
+            <input type="checkbox" name="adicionais[]" value="bacon"> Bacon<br>
+            <input type="checkbox" name="adicionais[]" value="azeitona"> Azeitona<br>
+            <input type="checkbox" name="adicionais[]" value="cebola"> Cebola<br>
+            <input type="checkbox" name="adicionais[]" value="alho"> Alho<br><br>
+            <label for="obs">Observações:</label><br>
+            <textarea id="obs" name="obs" rows="4" cols="40"
+                placeholder="Alguma instrução especial?"></textarea><br><br>
+            <button type="submit">Enviar Pedido</button>
+        </form>
+    </body>
+</html>
